@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Storybook</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #0a0f29;
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+        .story-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #f4c242;
+        }
+        .story-text {
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .hidden {
+            display: none;
+        }
+		.container {
+    border: 3px solid #f4c242; /* Golden border */
+    border-radius: 10px; /* Soft corners */
+    padding: 20px;
+}
+
+.story-title {
+    border-bottom: 3px solid #f4c242; /* Underline effect */
+    padding-bottom: 10px;
+}
+
+
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">STORY FINDRES</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="center.html">Explore</a></li>
+      <li><a href="final.html">End</a></li>
+    </ul>
+  </div>
+</nav>
+
+    <div  id="scene1"class="container text-center mt-5">
+        <h1 class="story-title">The Environmental world</h1>
+		<img src="https://images.pexels.com/photos/302804/pexels-photo-302804.jpeg?cs=srgb&dl=wood-dawn-landscape-302804.jpg&fm=jpg" width="200px">
+        <p class="story-text fade-in">You stand at the edge of a mysterious forest. The wind whispers secrets...</p>
+        <button class="btn btn-primary mt-3" onclick="nextScene('scene5')">Enter the forest</button>
+    </div>
+    <div id="scene2" class="container text-center mt-5">
+        <h1 class="story-title">The Fairy world</h1>
+		<img src="C:\Users\G FATHIMA\OneDrive\Desktop\html\image,video\disney world pic.jpg" width="200px">
+        <p class="story-text fade-in">Just click me i will show you the miracles.</p>
+        <button class="btn btn-primary mt-3" onclick="nextScene('scene7')">Enter Disney</button>
+    </div>
+	<div id="scene3" class="container text-center mt-5">
+        <h1 class="story-title">Romantic hunt</h1>
+		<img src="https://i.pinimg.com/originals/42/cb/85/42cb85675bb1065db1a2c312d57876da.jpg" width="200px">
+        <p class="story-text fade-in">your moves are making me to move -__-.</p>
+        <button class="btn btn-primary mt-3" onclick="nextScene('scene9')">Touch me !! </button>
+    </div>
+	<div id="scene4"class="container text-center mt-5">
+        <h1 class="story-title">The Horror</h1>
+		<img src="https://wallpapers.com/images/hd/3d-horror-haunted-street-dzi9g0p3whld7u4x.jpg" width="200px">
+        <p class="story-text fade-in">Do you know what the Horror means.</p>
+        <button class="btn btn-primary mt-3" onclick="nextScene('scene11')">Misterious world</button>
+    </div>
+    <div id="scene5" class="container text-center mt-5 hidden">
+        <p class="story-text fade-in">As you step inside,just start the story.</p>
+		<img src="https://i.pinimg.com/736x/ae/a9/f2/aea9f284000bdd23719eace259e75948.jpg" width= "500px">
+		<p><span>To enjoy the visvals</span></p>
+        <button class="btn btn-success mt-3" onclick="nextScene('scene6')">Click for video</button>
+    </div>
+
+    <div id="scene6" class="container text-center mt-5 hidden">
+	<img src="https://i.pinimg.com/originals/8c/cc/16/8ccc16085cd76674e9f5c9fd046dcded.jpg" width="250px">
+	<br></br>
+	<a href="https://www.youtube.com/watch?v=GP9QMlD5EW8&pp=ygUZZm9yZXN0IHN0b3JpZXMgaW4gZW5nbGlzaNIHCQmyCQGHKiGM7w%3D%3D"> Enjoy this &#128151;</a>
+	<br></br>
+        <p class="story-text fade-in">This story will enhance your thougths about forest</p>
+		<p><strong> Back to home to restart the story or to explore more</strong></p>
+        <button class="btn btn-warning mt-3" onclick="restartStory()">Restart Story</button>
+    </div>
+	
+	<div id="scene7" class="container text-center mt-5 hidden">
+	<p>As you step inside,just start the story.</p>
+	<img src="https://imgv2-2-f.scribdassets.com/img/document/133590593/original/648fdf3eeb/1631342424?v=1" width="500px">
+	<p><span>To enjoy the visvals</span></p>
+        <button class="btn btn-success mt-3" onclick="nextScene('scene8')">Click for video</button>
+    </div>
+	
+	<div id="scene8" class="container text-center mt-5 hidden">
+	<img src="https://imaginationsoup.net/wp-content/uploads/2021/07/f-is-for-fairy-tale.jpeg" width="100px">
+	<a href="https://www.bing.com/videos/riverview/relatedvideo?&q=Kids+Fairy+Tales&&mid=E22C7671A21E69A5F1CBE22C7671A21E69A5F1CB&&FORM=VRDGAR"> Enjoy this &#128151;</a>
+	<br></br>
+        <p class="story-text fade-in">This story will enhance your thougths about forest</p>
+		<p><strong> Back to home to restart the story or to explore more</strong></p>
+        <button class="btn btn-warning mt-3" onclick="restartStory()">Restart Story</button>
+    </div>
+
+    <div id="scene9" class="container text-center mt-5 hidden">
+	<p>As you step inside,just start the story.</p>
+	<img src="https://i.pinimg.com/originals/13/0c/79/130c79288a9f4876f3559118150e92b5.jpg" width="500px">
+	<p><span>To enjoy the visvals</span></p>
+        <button class="btn btn-success mt-3" onclick="nextScene('scene10')">Click for video</button>
+    </div>
+	
+	<div id="scene10" class="container text-center mt-5 hidden">
+	<img src="https://th.bing.com/th/id/OIP.gleDiVmmZDrOQ7QzlecsLQHaLG?r=0&rs=1&pid=ImgDetMain" width="100px">
+	<a href="https://www.bing.com/videos/riverview/relatedvideo?&q=romantic+stories+in+pamplates&&mid=D9456608ADE9CA2233DED9456608ADE9CA2233DE&&FORM=VRDGAR"> Enjoy this &#128151;</a>
+	<br></br>
+        <p class="story-text fade-in">This story will enhance your thougths about forest</p>
+		<p><strong> Back to home to restart the story or to explore more</strong></p>
+        <button class="btn btn-warning mt-3" onclick="restartStory()">Restart Story</button>
+    </div>
+	
+	<div id="scene11" class="container text-center mt-5 hidden">
+	<p>As you step inside,just start the story.</p>
+	<img src="https://th.bing.com/th/id/OIP.kL2SHBZTOq1N0PFBMR2Y9gHaHa?r=0&rs=1&pid=ImgDetMain" width="500px">
+	<p><span>To enjoy the visvals</span></p>
+        <button class="btn btn-success mt-3" onclick="nextScene('scene12')">Click for video</button>
+    </div>
+	
+	<div id="scene12" class="container text-center mt-5 hidden">
+     <img src="https://cdn.kobo.com/book-images/fc31d05b-acf6-4609-8d5a-dcf8b84c6a71/1200/1200/False/horror-stories-a-short-story-collection.jpg" width="100px">
+	<a href="https://cdn.kobo.com/book-images/fc31d05b-acf6-4609-8d5a-dcf8b84c6a71/1200/1200/False/horror-stories-a-short-story-collection.jpg"> Enjoy this &#128151;</a>
+	<br></br>
+        <p class="story-text fade-in">This story will enhance your thougths about forest</p>
+		<p><strong> Back to home to restart the story or to explore more</strong></p>
+        <button class="btn btn-warning mt-3" onclick="restartStory()">Restart Story</button>
+    </div>
+
+    <script>
+	
+        function nextScene(sceneId) {
+            // Hide all scenes
+            document.querySelectorAll(".container").forEach(scene => {
+                scene.classList.add("hidden");
+            });	
+            // Show the selected scene
+            document.getElementById(sceneId).classList.remove("hidden");
+        }
+
+        function restartStory() {
+            window.location.reload();
+        }
+
+</script>
+
+<div>
+	<button class="btn btn-secondary mt-3" onclick="goToWelcome()">Move to next</button>
+
+</div>
+<script>
+    function goToWelcome() {
+    window.location.href = "final.html"; // ✅ This must match the actual file name
+}
+</script>
+</body>
+</html>
