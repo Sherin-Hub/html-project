@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The End | Thank You</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #0a0f29, #1c4c7d);
+      color: white;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #ffd700;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+
+    .end-image {
+      max-width: 400px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+
+    .btn {
+      margin: 15px 10px;
+      padding: 12px 25px;
+      font-size: 1.2rem;
+      border-radius: 30px;
+      transition: 0.3s;
+    }
+
+    .btn-explore {
+      background-color: #ffc107;
+      color: black;
+      border: none;
+    }
+
+    .btn-explore:hover {
+      background-color: #ff9800;
+      transform: scale(1.05);
+    }
+
+    .certificate {
+      margin: 30px auto;
+      border: 2px dashed gold;
+      padding: 20px;
+      width: 80%;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+    }
+
+    .form-control {
+      max-width: 500px;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌟 Thank You for Exploring! 🌟</h1>
+  <p>We hope you enjoyed your magical journey.</p>
+
+  <img src="https://storiesfromtheweb.org/wp-content/themes/kids-camp/assets/images/header-image.jpg" class="end-image" alt="The End">
+
+  <div class="certificate">
+    <h2 style="color: gold;">🎓 Your Certificate of Completion</h2>
+    <a href="https://i.imgur.com/R6xGzvP.png" download="storybook_certificate.png">
+      <button class="btn btn-success">📥 Download Certificate</button>
+    </a>
+  </div>
+
+  <div>
+    <h3>📝 Share your favorite part:</h3>
+    <textarea class="form-control" rows="4" placeholder="Type your thoughts here..."></textarea>
+    <button class="btn btn-info" onclick="alert('Thanks for sharing! 😊')">Submit</button>
+  </div>
+
+  <br>
+
+  <div>
+    <button class="btn btn-primary" onclick="downloadStory()">📦 Download Your Story</button>
+    <button class="btn btn-primary" onclick="backToHome()">🔁 Explore Again</button>
+  </div>
+
+  <script>
+    function backToHome() {
+      window.location.href = "center.html"; // change this to your homepage
+    }
+
+    function downloadStory() {
+      const text = "Thank you for reading the story!\nWe hope you had a magical time.\n-- The Storybook Team ✨";
+      const blob = new Blob([text], { type: "text/plain" });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "my_storybook.txt";
+      link.click();
+    }
+  </script>
+
+</body>
+</html>
